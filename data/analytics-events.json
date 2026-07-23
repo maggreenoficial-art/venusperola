@@ -1,0 +1,29 @@
+[
+  {
+    "type": "page_view",
+    "sessionId": "ff14bb7d-1904-4d77-9f90-22c732d8066a",
+    "path": "/",
+    "eventId": "145537a3-3daf-412e-af6b-2a69fe5f8341",
+    "source": "browser",
+    "id": "70d25687-38a6-4c65-b2ac-82aaa279f8e7",
+    "timestamp": "2026-07-22T19:02:38.434Z"
+  },
+  {
+    "type": "page_view",
+    "sessionId": "84c2c35d-d5a3-411e-ba49-dee26ddd16e7",
+    "path": "/",
+    "eventId": "cfca23a3-8b1f-4fc2-8278-4a15e9cea1ee",
+    "source": "browser",
+    "id": "7f4ce5df-e769-43ad-9792-05b49012464b",
+    "timestamp": "2026-07-22T19:02:45.847Z"
+  },
+  {
+    "type": "page_view",
+    "sessionId": "84c2c35d-d5a3-411e-ba49-dee26ddd16e7",
+    "path": "/C:/Users/HUMBERTO/outbellesitefinal/src/app/gerenciaralojabt/page.tsx",
+    "eventId": "b748d855-67ce-4161-878d-ea7c2beddb3f",
+    "source": "browser",
+    "id": "21fd0e0c-3a8c-4c88-9a81-abec59e82f22",
+    "timestamp": "2026-07-22T19:03:55.875Z"
+  }
+]

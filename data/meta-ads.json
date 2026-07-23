@@ -1,0 +1,41 @@
+{
+  "targetRoas": 3,
+  "campaigns": [
+    {
+      "id": "camp-perola-secreta",
+      "name": "Pérola Secreta — Conversão",
+      "status": "active",
+      "spend": 850,
+      "impressions": 42000,
+      "clicks": 1260,
+      "conversions": 18
+    },
+    {
+      "id": "camp-coelhinho",
+      "name": "Coelhinho Luxo — Remarketing",
+      "status": "active",
+      "spend": 420,
+      "impressions": 18500,
+      "clicks": 740,
+      "conversions": 11
+    },
+    {
+      "id": "camp-topo-funil",
+      "name": "Topo de Funil — Awareness",
+      "status": "active",
+      "spend": 600,
+      "impressions": 95000,
+      "clicks": 2100,
+      "conversions": 6
+    },
+    {
+      "id": "camp-mystery",
+      "name": "Mystery Box — Lançamento",
+      "status": "paused",
+      "spend": 280,
+      "impressions": 12000,
+      "clicks": 380,
+      "conversions": 4
+    }
+  ]
+}

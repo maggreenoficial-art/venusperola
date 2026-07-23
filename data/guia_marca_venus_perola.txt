@@ -1,0 +1,417 @@
+
+================================================================================
+                    GUIA DE MARCA — VÊNUS PÉROLA
+                    A deusa em você
+================================================================================
+
+═══════════════════════════════════════════════════════════════════════════════
+1. CONCEITO DA MARCA
+═══════════════════════════════════════════════════════════════════════════════
+
+ORIGEM DO NOME
+    Vênus Pérola nasce da união entre mitologia e anatomia feminina. Vênus,
+    deusa do amor e da beleza na mitologia romana, emergiu do mar sobre uma
+    concha — a mesma concha que cria pérolas. A pérola, por sua vez, é a
+    metáfora perfeita para o clitóris: pequena, preciosa, escondida até ser
+    revelada, e capaz de irradiar prazer intenso quando estimulada.
+
+    O planeta Vênus também é conhecido como a "estrela da manhã" — o primeiro
+    brilho antes do amanhecer. Assim como a deusa, a marca representa o
+    despertar do prazer feminino.
+
+POSICIONAMENTO
+    Sex shop premium para mulheres que se veem como deusas. Não vendemos
+    brinquedos — vendemos rituais de auto-descoberta.
+
+    Vênus Pérola não é um sex shop comum. É um santuário do prazer feminino,
+    onde cada produto é apresentado como uma joia, cada descrição é um poema,
+    e cada compra é um ato de empoderamento.
+
+PROMESSA DA MARCA
+    "Revelar a deusa que existe em cada mulher, através do prazer consciente
+    e sofisticado."
+
+═══════════════════════════════════════════════════════════════════════════════
+2. PALETA DE CORES
+═══════════════════════════════════════════════════════════════════════════════
+
+    ┌─────────────────────────────────────────────────────────────────────┐
+    │  DOURADO DIVINO    #C9A227    RGB(201, 162, 39)                     │
+    │  Cor primária. Usada em: logo, botões CTA, destaques, ícones.      │
+    │  Representa: divindade, luxo, valor, o brilho da pérola.           │
+    ├─────────────────────────────────────────────────────────────────────┤
+    │  ROSA PÉROLA       #F4E4E1    RGB(244, 228, 225)                    │
+    │  Cor de fundo claro. Usada em: backgrounds, cards, seções suaves.    │
+    │  Representa: feminilidade, delicadeza, a carne da pérola.            │
+    ├─────────────────────────────────────────────────────────────────────┤
+    │  ROXO MÍSTICO      #6B3A7D    RGB(107, 58, 125)                     │
+    │  Cor secundária. Usada em: botões secundários, hover, detalhes.    │
+    │  Representa: mistério, espiritualidade, profundidade do oceano.    │
+    ├─────────────────────────────────────────────────────────────────────┤
+    │  AZUL OCEANO       #1E3A5F    RGB(30, 58, 95)                      │
+    │  Cor de fundo escuro. Usada em: headers, footers, noite, luxo.     │
+    │  Representa: profundidade do mar, sofisticação, o desconhecido.      │
+    ├─────────────────────────────────────────────────────────────────────┤
+    │  BRANCO ESPUMA     #FAF8F5    RGB(250, 248, 245)                    │
+    │  Cor de fundo principal. Usada em: página base, respiro visual.      │
+    │  Representa: pureza, espuma do mar, simplicidade elegante.           │
+    ├─────────────────────────────────────────────────────────────────────┤
+    │  ROSA ANTIGO       #D4A5A5    RGB(212, 165, 165)                    │
+    │  Cor de toque. Usada em: detalhes, bordas sutis, sensualidade.     │
+    │  Representa: calor, pele, intimidade, o toque divino.              │
+    └─────────────────────────────────────────────────────────────────────┘
+
+    REGRAS DE USO:
+    • Nunca usar o Dourado Divino em texto corrido (apenas em destaques)
+    • Fundos escuros (Azul Oceano) devem ter texto em Branco Espuma ou Rosa Pérola
+    • Fundos claros (Branco Espuma) devem ter texto em Azul Oceano ou Roxo Místico
+    • O Dourado Divino NUNCA deve tocar o Rosa Antigo (conflito de temperatura)
+
+═══════════════════════════════════════════════════════════════════════════════
+3. TIPOGRAFIA
+═══════════════════════════════════════════════════════════════════════════════
+
+    FONTE PRIMÁRIA: Cormorant Garamond
+    ─────────────────────────────────────────
+    Pesos: Light 300, Regular 400
+    Uso: Títulos, logo, headlines, taglines
+    Por quê: Serif elegante, fina, com ar clássico e atemporal. Remete a
+             joalherias e revistas de luxo.
+
+    FONTE SECUNDÁRIA: Montserrat
+    ─────────────────────────────────────────
+    Pesos: Light 300, Regular 400, Medium 500
+    Uso: Corpo de texto, botões, navegação, preços, descrições
+    Por quê: Sans-serif moderna, legível, versátil. Contraste perfeito com
+             a serif primária.
+
+    FONTE TERCIÁRIA: Playfair Display Italic
+    ─────────────────────────────────────────
+    Peso: Italic 400
+    Uso: Citações, destaques emocionais, subtítulos poéticos, depoimentos
+    Por quê: Serif dramática, expressiva. Adiciona personalidade e emoção.
+
+    HIERARQUIA TIPOGÁFICA:
+    H1 (Título de página): Cormorant Garamond Light, 48-64px, cor Azul Oceano
+    H2 (Seção): Cormorant Garamond Light, 32-40px, cor Azul Oceano
+    H3 (Subseção): Montserrat Medium, 20-24px, cor Roxo Místico
+    Body: Montserrat Regular, 16px, cor #333333 sobre fundo claro
+    Caption/Tags: Montserrat Light, 12px, cor #888888
+    Preço: Montserrat Medium, 20px, cor Dourado Divino
+    Botão CTA: Montserrat Medium, 14px, cor #0d0d1a (sobre Dourado Divino)
+
+═══════════════════════════════════════════════════════════════════════════════
+4. TOM DE VOZ — E.L.E.V.A
+═══════════════════════════════════════════════════════════════════════════════
+
+    O tom de voz da Vênus Pérola é definido pelo acrônimo E.L.E.V.A:
+
+    [E] EMPODERADOR
+    ─────────────────────────────────────────
+    Celebramos o prazer feminino como direito, não privilégio.
+    Não pedimos desculpas pelo prazer. Não usamos eufemismos embaraçosos.
+    Falamos com a certeza de quem sabe que a mulher merece se sentir bem.
+
+    EXEMPLO CERTO:  "Você merece prazer. Ponto final."
+    EXEMPLO ERRADO: "Se você se sentir confortável, talvez possa tentar..."
+
+    [L] LÍRICO
+    ─────────────────────────────────────────
+    Usamos metáforas, poesia e mitologia em vez de termos explícitos.
+    Nossas descrições são poemas. Nossos nomes evocam imagens.
+    Não dizemos "vibrador de clitóris" — dizemos "estimulador de pérola".
+
+    EXEMPLO CERTO:  "Onde o divino encontra o prazer"
+    EXEMPLO ERRADO: "O melhor vibrador do mercado"
+
+    [E] ELEGANTE
+    ─────────────────────────────────────────
+    Nunca vulgar, sempre sofisticado. Como uma joalheria de prazer.
+    Nosso site não parece um sex shop — parece uma boutique de luxo.
+    Cada palavra é escolhida com o cuidado de quem escolhe uma joia.
+
+    EXEMPLO CERTO:  "Ritual de auto-descoberta"
+    EXEMPLO ERRADO: "Brinquedo sexual barato"
+
+    [V] VIBRANTE
+    ─────────────────────────────────────────
+    Energia positiva, entusiasmo genuíno pela descoberta do prazer.
+    Não somos sérios demais. Celebramos com alegria!
+    O prazer é divertido, e nossa voz reflete isso.
+
+    EXEMPLO CERTO:  "Descubra o que seu corpo é capaz de sentir ✨"
+    EXEMPLO ERRADO: "Produto para uso íntimo feminino"
+
+    [A] ACOLHEDOR
+    ─────────────────────────────────────────
+    Sem julgamentos, sem pressão. Um espaço seguro para explorar.
+    Não importa se é sua primeira vez ou sua centésima.
+    Todas as deusas são bem-vindas aqui.
+
+    EXEMPLO CERTO:  "Comece sua jornada no seu próprio ritmo"
+    EXEMPLO ERRADO: "Você precisa disso AGORA"
+
+═══════════════════════════════════════════════════════════════════════════════
+5. ELEMENTOS VISUAIS
+═══════════════════════════════════════════════════════════════════════════════
+
+    ÍCONES PERMITIDOS:
+    ✓ Conchas estilizadas (minimalistas, não realistas)
+    ✓ Ondas em linhas finas douradas
+    ✓ Pérolas como pontos de luz e detalhes
+    ✓ Espuma do mar em texturas sutis
+    ✓ Silhuetas femininas em aquarela (sem rosto, etéreas)
+    ✓ Constelações e mapas celestes
+    ✓ Mármore rosa e dourado em texturas de fundo
+    ✓ Gotas de água, orvalho
+    ✓ Luas crescentes e fases lunares
+
+    ÍCONES PROIBIDOS:
+    ✗ Imagens explícitas de genitais
+    ✗ Fotos de pessoas em poses sexuais
+    ✗ Cores neon, brilho excessivo
+    ✗ Fontes cursivas excessivas ou infantis
+    ✗ Emojis vulgares ou explícitos
+    ✗ Termos técnicos em destaque (vibrador, dildo, etc.)
+
+═══════════════════════════════════════════════════════════════════════════════
+6. COPY PARA META ADS — PRONTA PARA USAR
+═══════════════════════════════════════════════════════════════════════════════
+
+    ─────────────────────────────────────────
+    AD #1: AQUECIMENTO (Heat Pleasure)
+    Objetivo: Venda direta
+    Público: Mulheres 25-40, interesse em bem-estar, autocuidado
+    Formato: Carrossel ou Vídeo curto
+    ─────────────────────────────────────────
+
+    HEADLINE:
+    "Você já sentiu o calor de 42 graus de prazer?"
+
+    TEXTO PRINCIPAL:
+    Existe uma temperatura em que o corpo inteiro desperta.
+    Não é febre. É o Heat Pleasure.
+
+    O único estimulador que aquece enquanto massageia,
+    criando uma sensação que palavras não conseguem descrever.
+
+    8 modos. 2 motores. 1 deusa.
+
+    CTA: Descobrir mais
+
+    ─────────────────────────────────────────
+    AD #2: EMPODERAMENTO (Marca)
+    Objetivo: Conscientização/Reconhecimento
+    Público: Mulheres 25-45, interesse em feminismo, empoderamento
+    Formato: Imagem única ou Reels
+    ─────────────────────────────────────────
+
+    HEADLINE:
+    "A deusa não pede permissão para prazer."
+
+    TEXTO PRINCIPAL:
+    Durante séculos, o prazer feminino foi silenciado.
+    Escondido. Vergonhoso.
+
+    A Vênus Pérola nasceu para mudar isso.
+
+    Somos um santuário onde o prazer é celebrado,
+    onde cada mulher é tratada como a deusa que ela é.
+
+    Porque você merece se sentir bem. Sem pedir desculpas.
+
+    CTA: Conheça a marca
+
+    ─────────────────────────────────────────
+    AD #3: SUCÇÃO (Suction Pro)
+    Objetivo: Venda direta
+    Público: Mulheres 22-38, primeira compra
+    Formato: Vídeo demonstrativo
+    ─────────────────────────────────────────
+
+    HEADLINE:
+    "O segredo que as deusas guardam há milênios"
+
+    TEXTO PRINCIPAL:
+    As sereias cantavam para atrair.
+    Nós criamos algo que atrai de verdade.
+
+    O Suction Pro usa ondas de pressão de ar —
+    não vibração — para criar uma sensação que
+    nenhum outro estimulador consegue reproduzir.
+
+    10 níveis. Silencioso. Discreto.
+    Parece um difusor de perfumes.
+    Funciona como um milagre.
+
+    CTA: Quero experimentar
+
+    ─────────────────────────────────────────
+    AD #4: APP/RELACIONAMENTO (Whale Connect)
+    Objetivo: Venda direta
+    Público: Casais, mulheres em relacionamento
+    Formato: Carrossel
+    ─────────────────────────────────────────
+
+    HEADLINE:
+    "O prazer não tem distância."
+
+    TEXTO PRINCIPAL:
+    Ele está em outra cidade. Outro estado. Outro país.
+    Mas o controle está na palma da mão dele.
+
+    O Whale Connect é controlado por aplicativo.
+    Seu parceiro escolhe o modo. Você sente tudo.
+
+    À distância. Em tempo real. Intimidade sem fronteiras.
+
+    CTA: Surpreenda quem você ama
+
+    ─────────────────────────────────────────
+    AD #5: PRODUTO DE ENTRADA (Jewel Plug)
+    Objetivo: Captura de lead / Primeira compra
+    Público: Mulheres 22-35, curiosas, nunca compraram
+    Formato: Imagem ou Stories
+    ─────────────────────────────────────────
+
+    HEADLINE:
+    "A primeira pérola é a mais preciosa."
+
+    TEXTO PRINCIPAL:
+    Começar não precisa ser intimidante.
+
+    O Jewel Plug P é pequeno, macio e lindo —
+    com uma pedra decorativa que parece joia.
+
+    Silicone médico. Confortável. Seguro.
+    A porta de entrada para um novo mundo de prazer.
+
+    E por menos de R$ 21,00.
+
+    CTA: Começar minha jornada
+
+═══════════════════════════════════════════════════════════════════════════════
+7. ESTRATÉGIA DE CONTEÚDO
+═══════════════════════════════════════════════════════════════════════════════
+
+    PILARES DE CONTEÚDO (80/20):
+
+    40% — EDUCAÇÃO
+    "Como escolher seu primeiro estimulador"
+    "5 mitos sobre o prazer feminino"
+    "Guia: Silicone médico vs. TPE"
+    "Como usar o Heat Pleasure: passo a passo"
+
+    30% — INSPIRAÇÃO
+    "A história de Vênus na mitologia"
+    "Depoimentos de clientes (anônimos)"
+    "Playlist para momentos íntimos"
+    "Frases de empoderamento feminino"
+
+    20% — PRODUTO
+    Lançamentos, destaques, promoções
+
+    10% — COMUNIDADE
+    Enquetes, perguntas, interação
+    "Qual a cor da sua deusa? Rosa, roxo ou dourado?"
+
+    FREQUÊNCIA:
+    Instagram: 1 post/dia + 3 stories/dia
+    TikTok: 3 vídeos/semana
+    Email: 1 newsletter/semana
+    Meta Ads: 2-3 campanhas ativas simultâneas
+
+═══════════════════════════════════════════════════════════════════════════════
+8. ESTRATÉGIA DE PREÇOS NA MARCA
+═══════════════════════════════════════════════════════════════════════════════
+
+    LINHAS DE PRODUTO:
+
+    ✨ COLEÇÃO DIVINA (Entry)
+    Jewel Plug P, Coelhinho Estimulador
+    Preço: R$ 20-40
+    Função: Captura de lead, primeira compra
+
+    ✨ COLEÇÃO AURORA (Core)
+    Explorador G, Pulse Touch, Duo Power
+    Preço: R$ 70-90
+    Função: Produtos principais, maior volume
+
+    ✨ COLEÇÃO OLIMPO (Premium)
+    Heat Pleasure, Suction Pro, Royal Rotator
+    Preço: R$ 170-230
+    Função: Margem alta, posicionamento premium
+
+    ✨ COLEÇÃO ETERNA (Luxo)
+    Edições limitadas, kits, presentes
+    Preço: R$ 300+
+    Função: Exclusividade, presenteabilidade
+
+═══════════════════════════════════════════════════════════════════════════════
+9. CHECKLIST DE LANÇAMENTO
+═══════════════════════════════════════════════════════════════════════════════
+
+    DOMÍNIO E PLATAFORMA
+    □ Registrar venusperola.com.br
+    □ Configurar Shopify/WooCommerce com tema escuro elegante
+    □ Instalar pixel Meta Ads
+    □ Configurar checkout transparente
+
+    IDENTIDADE VISUAL
+    □ Criar logo final (vetor)
+    □ Definir favicon (pérola dourada)
+    □ Criar templates Instagram (3 modelos)
+    □ Criar templates Stories (2 modelos)
+    □ Criar templates Email (1 modelo)
+
+    CONTEÚDO
+    □ Fotografar todos os produtos (fundo neutro, iluminação suave)
+    □ Criar 10 posts de lançamento
+    □ Gravar 3 Reels de apresentação
+    □ Escrever 5 artigos para blog
+    □ Criar guia "Primeiros Passos" (lead magnet)
+
+    ANÚNCIOS
+    □ Criar 5 campanhas no Meta Ads
+    □ Definir públicos personalizados
+    □ Configurar remarketing
+    □ Definir orçamento inicial: R$ 1.500/mês
+
+    LEGAL
+    □ Termos de uso
+    □ Política de privacidade
+    □ Política de trocas e devoluções
+    □ Certificado SSL
+    □ Simples Nacional ativo
+
+═══════════════════════════════════════════════════════════════════════════════
+10. MÉTRICAS DE SUCESSO (KPIs)
+═══════════════════════════════════════════════════════════════════════════════
+
+    MÊS 1-3 (LANÇAMENTO)
+    • ROAS mínimo: 2.5x
+    • CPA: até R$ 80
+    • Taxa de conversão: 1.5%
+    • Ticket médio: R$ 120
+
+    MÊS 4-6 (CRESCIMENTO)
+    • ROAS: 3.5x+
+    • CPA: até R$ 60
+    • Taxa de conversão: 2.5%
+    • Ticket médio: R$ 150
+    • Taxa de recompra: 20%
+
+    MÊS 7-12 (CONSOLIDAÇÃO)
+    • ROAS: 4x+
+    • CPA: até R$ 45
+    • Taxa de conversão: 3.5%
+    • Ticket médio: R$ 180
+    • Taxa de recompra: 35%
+    • LTV médio: R$ 450
+
+═══════════════════════════════════════════════════════════════════════════════
+                            VÊNUS PÉROLA
+                         A deusa em você
+═══════════════════════════════════════════════════════════════════════════════
+"Não vendemos brinquedos. Vendemos a revelação da deusa interior."
+═══════════════════════════════════════════════════════════════════════════════
