@@ -22,7 +22,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const hasMultipleVariants = product.variants.length > 1;
 
   return (
-    <article className="group flex flex-col">
+    <article className="group flex min-w-0 w-full flex-col">
       <Link href={`/produto/${product.slug}`} className="block">
         <div className="relative aspect-square w-full overflow-hidden bg-white">
           <ProductImage
@@ -30,31 +30,31 @@ export function ProductCard({ product }: ProductCardProps) {
             image={image}
           />
           {!inStock && (
-            <span className="absolute left-3 top-3 rounded-full bg-black/80 px-2 py-1 text-[10px] tracking-widest uppercase text-white/60">
+            <span className="absolute left-2 top-2 rounded-full bg-black/80 px-2.5 py-1 text-xs tracking-wide uppercase text-white/80 sm:left-3 sm:top-3">
               Esgotado
             </span>
           )}
           {hasMultipleVariants && inStock && (
-            <span className="absolute right-3 top-3 rounded-full bg-black/80 px-2 py-1 text-[10px] tracking-widest uppercase text-white/60">
+            <span className="absolute right-2 top-2 rounded-full bg-black/80 px-2.5 py-1 text-xs tracking-wide uppercase text-white/80 sm:right-3 sm:top-3">
               {product.variants.length} opções
             </span>
           )}
         </div>
       </Link>
 
-      <div className="mt-4 flex flex-col gap-1">
-        <p className="text-[10px] uppercase tracking-[0.2em] text-muted">
+      <div className="mt-3 flex flex-col gap-1.5 sm:mt-4">
+        <p className="text-xs uppercase tracking-[0.15em] text-muted sm:text-sm">
           {product.line}
         </p>
         <Link href={`/produto/${product.slug}`}>
-          <h3 className="text-sm font-medium leading-snug transition-colors group-hover:text-accent">
+          <h3 className="text-base font-medium leading-snug transition-colors group-hover:text-accent sm:text-lg">
             {product.name}
           </h3>
         </Link>
-        <p className="text-sm text-accent">{formatPriceRange(product)}</p>
+        <p className="text-base text-accent sm:text-lg">{formatPriceRange(product)}</p>
         <Link
           href={`/produto/${product.slug}`}
-          className="touch-target mt-2 flex w-full items-center justify-center rounded-full border border-white/20 py-2.5 text-center text-xs tracking-widest uppercase transition-all hover:border-accent hover:bg-accent hover:text-black"
+          className="touch-target mt-1 flex w-full items-center justify-center rounded-full border border-white/20 py-3 text-center text-sm tracking-widest uppercase transition-all hover:border-accent hover:bg-accent hover:text-black"
         >
           {hasMultipleVariants ? "Escolher opção" : inStock ? "Ver produto" : "Esgotado"}
         </Link>

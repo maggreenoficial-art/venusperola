@@ -41,13 +41,13 @@ export function Header() {
         className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md"
         style={{ paddingTop: "env(safe-area-inset-top)" }}
       >
-        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 sm:py-4">
+        <div className="mx-auto max-w-7xl px-4 py-3.5 sm:px-6 sm:py-4">
           <div className="flex items-center justify-between gap-3">
             <div className="flex items-center gap-2">
               <button
                 type="button"
                 onClick={() => setMenuOpen(true)}
-                className="flex h-10 w-10 items-center justify-center text-white/70 hover:text-white md:hidden"
+                className="flex h-11 w-11 items-center justify-center text-white/70 hover:text-white md:hidden"
                 aria-label="Abrir menu"
               >
                 <Menu size={22} />
@@ -66,7 +66,7 @@ export function Header() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "text-sm tracking-wide transition-colors",
+                      "text-base tracking-wide transition-colors",
                       isActive
                         ? "text-accent"
                         : "text-white hover:text-accent-hover"
@@ -118,11 +118,11 @@ export function Header() {
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Buscar produtos..."
                 autoFocus
-                className="min-h-11 flex-1 rounded-full border border-white/30 bg-transparent px-4 text-base text-white outline-none focus:border-accent sm:text-sm"
+                className="min-h-12 flex-1 rounded-full border border-white/30 bg-transparent px-4 text-base text-white outline-none focus:border-accent"
               />
               <button
                 type="submit"
-                className="touch-target shrink-0 rounded-full bg-white px-5 text-xs font-semibold text-black"
+                className="touch-target shrink-0 rounded-full bg-white px-5 py-3 text-sm font-semibold text-black"
               >
                 Buscar
               </button>

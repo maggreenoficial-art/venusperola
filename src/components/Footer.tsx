@@ -4,11 +4,11 @@ import { brand } from "@/lib/brand";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 px-4 py-10 sm:px-6 sm:py-12">
+    <footer className="border-t border-white/10 px-4 py-12 sm:px-6 sm:py-14">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 sm:flex-row sm:justify-between">
         <Logo size="sm" />
 
-        <nav className="grid grid-cols-2 gap-x-4 gap-y-3 text-xs text-muted sm:flex sm:flex-wrap sm:justify-center sm:gap-6">
+        <nav className="grid w-full max-w-md grid-cols-2 gap-x-4 gap-y-4 text-sm text-muted sm:flex sm:max-w-none sm:flex-wrap sm:justify-center sm:gap-6">
           <Link href="/bem-estar" className="hover:text-white">
             Bem-Estar
           </Link>
@@ -38,12 +38,12 @@ export function Footer() {
           </Link>
         </nav>
 
-        <p className="text-xs text-muted">
+        <p className="text-sm text-muted">
           © {new Date().getFullYear()} {brand.name}
         </p>
       </div>
 
-      <p className="mx-auto mt-8 max-w-lg text-center text-[10px] leading-relaxed text-white/30">
+      <p className="mx-auto mt-8 max-w-xl text-center text-xs leading-relaxed text-white/45 sm:text-sm">
         {brand.storeLegal} · Venda proibida para menores de 18 anos. Embalagem
         discreta em todas as entregas. Entrega discreta garantida — sem menção à
         loja na fatura ou na caixa.

@@ -50,7 +50,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
         style={{ paddingTop: "env(safe-area-inset-top)" }}
       >
         <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
-          <span className="text-xs tracking-[0.2em] text-muted uppercase">Menu</span>
+          <span className="text-sm tracking-[0.15em] text-muted uppercase">Menu</span>
           <button
             onClick={onClose}
             className="flex h-10 w-10 items-center justify-center text-white/70 hover:text-white"
@@ -72,7 +72,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                   href={link.href}
                   onClick={onClose}
                   className={cn(
-                    "flex min-h-12 items-center rounded-lg px-4 text-sm transition-colors",
+                    "flex min-h-14 items-center rounded-lg px-4 text-base transition-colors",
                     isActive
                       ? "bg-accent/10 text-accent"
                       : "text-white/80 hover:bg-white/5 hover:text-white"
@@ -92,7 +92,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           <Link
             href="/conta"
             onClick={onClose}
-            className="flex min-h-12 items-center justify-center rounded-full border border-white/20 text-sm hover:border-accent"
+            className="flex min-h-14 items-center justify-center rounded-full border border-white/20 text-base hover:border-accent"
           >
             Minha conta
           </Link>

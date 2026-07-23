@@ -32,11 +32,11 @@ export function MobileBottomBar() {
               key={href}
               href={href}
               className={cn(
-                "flex min-h-[3.25rem] flex-1 flex-col items-center justify-center gap-0.5 py-2 text-[10px] tracking-wide transition-colors",
+                "flex min-h-[3.5rem] flex-1 flex-col items-center justify-center gap-1 py-2 text-xs tracking-wide transition-colors",
                 isActive ? "text-accent" : "text-white/50"
               )}
             >
-              <Icon size={20} strokeWidth={isActive ? 2.25 : 1.75} />
+              <Icon size={22} strokeWidth={isActive ? 2.25 : 1.75} />
               <span>{label}</span>
             </Link>
           );
@@ -45,13 +45,13 @@ export function MobileBottomBar() {
         <button
           type="button"
           onClick={openCart}
-          className="relative flex min-h-[3.25rem] flex-1 flex-col items-center justify-center gap-0.5 py-2 text-[10px] tracking-wide text-white/50 transition-colors hover:text-accent"
+          className="relative flex min-h-[3.5rem] flex-1 flex-col items-center justify-center gap-1 py-2 text-xs tracking-wide text-white/60 transition-colors hover:text-accent"
           aria-label="Abrir carrinho"
         >
-          <ShoppingBag size={20} />
+          <ShoppingBag size={22} />
           <span>Carrinho</span>
           {totalItems > 0 && (
-            <span className="absolute right-[calc(50%-1.25rem)] top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-accent px-1 text-[9px] font-bold text-black">
+            <span className="absolute right-[calc(50%-1.35rem)] top-1.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-accent px-1 text-[11px] font-bold text-black">
               {totalItems > 9 ? "9+" : totalItems}
             </span>
           )}

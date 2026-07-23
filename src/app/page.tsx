@@ -31,7 +31,7 @@ export default function HomePage() {
       <EducationHub />
       <MarketingPillars />
       <CreationsSection />
-      <div className="mx-auto max-w-4xl px-6 pb-20">
+      <div className="store-container pb-20">
         <NewsletterSignup />
       </div>
       <ClubVenusCTA />

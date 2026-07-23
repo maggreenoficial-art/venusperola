@@ -230,14 +230,14 @@ export function CheckoutForm() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-4 pb-28 pt-6 sm:px-6 sm:pb-24 sm:pt-10">
-      <h1 className="font-serif text-2xl italic sm:text-3xl">Checkout</h1>
-      <p className="mt-2 text-sm text-muted">
+    <div className="mx-auto w-full max-w-6xl px-4 pb-32 pt-4 sm:px-6 sm:pb-24 sm:pt-10">
+      <h1 className="font-serif text-2xl italic sm:text-3xl md:text-4xl">Checkout</h1>
+      <p className="mt-2 text-base text-muted">
         Embalagem 100% discreta · {checkoutConfig.discreetBillingName} na fatura
       </p>
 
-      <div className="mt-8 flex gap-2">
-        {steps.map((s, i) => {
+      <div className="mt-8 flex flex-col gap-2 sm:flex-row sm:gap-2">
+        {steps.map((s) => {
           const Icon = s.icon;
           const isActive = s.id === step;
           const isDone =
@@ -250,7 +250,7 @@ export function CheckoutForm() {
               onClick={() => {
                 if (isDone) setStep(s.id);
               }}
-              className={`flex flex-1 items-center justify-center gap-2 border py-3 text-[10px] tracking-widest uppercase transition-colors ${
+              className={`flex flex-1 items-center justify-center gap-2 border py-3.5 text-xs tracking-widest uppercase transition-colors sm:text-sm ${
                 isActive
                   ? "border-accent bg-accent/10 text-accent"
                   : isDone
@@ -258,9 +258,8 @@ export function CheckoutForm() {
                     : "border-white/10 text-muted"
               }`}
             >
-              <Icon size={14} />
-              <span className="hidden sm:inline">{s.label}</span>
-              <span className="sm:hidden">{i + 1}</span>
+              <Icon size={16} />
+              <span>{s.label}</span>
             </button>
           );
         })}
@@ -270,7 +269,7 @@ export function CheckoutForm() {
         <div className="lg:col-span-3">
           {/* Resumo compacto no mobile */}
           <details className="mb-6 border border-white/10 p-4 lg:hidden">
-            <summary className="cursor-pointer text-xs font-bold tracking-[0.2em]">
+            <summary className="cursor-pointer text-sm font-bold tracking-[0.15em]">
               RESUMO · {formatPrice(finalTotal)}
             </summary>
             <CheckoutSummary
@@ -612,7 +611,7 @@ function Field({
 }) {
   return (
     <div>
-      <label className="mb-2 block text-[10px] tracking-widest text-muted uppercase">
+      <label className="mb-2 block text-xs tracking-widest text-muted uppercase">
         {label}
       </label>
       <input
@@ -621,7 +620,7 @@ function Field({
         onChange={(e) => onChange(e.target.value)}
         onBlur={onBlur}
         required={required}
-        className="w-full border-b border-white/20 bg-transparent py-3 text-sm outline-none focus:border-accent"
+        className="w-full border-b border-white/20 bg-transparent py-3.5 text-base outline-none focus:border-accent"
       />
     </div>
   );
