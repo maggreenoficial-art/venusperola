@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { getProfileById } from "@/lib/db/profiles";
+import { hasAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
@@ -16,25 +18,67 @@ export async function POST(request: Request) {
     }
 
     const supabase = await createClient();
+    const normalizedEmail = email.trim().toLowerCase();
     const { data, error } = await supabase.auth.signInWithPassword({
-      email,
+      email: normalizedEmail,
       password,
     });
 
     if (error || !data.user) {
-      return NextResponse.json({ error: "Credenciais inválidas." }, { status: 401 });
+      if (error?.message?.toLowerCase().includes("email not confirmed")) {
+        return NextResponse.json(
+          {
+            error:
+              "E-mail ainda não confirmado. Abra o link no e-mail ou confirme manualmente no Supabase → Authentication.",
+          },
+          { status: 401 }
+        );
+      }
+
+      if (error?.message?.toLowerCase().includes("invalid login credentials")) {
+        return NextResponse.json(
+          {
+            error:
+              "E-mail ou senha incorretos. Se o perfil admin existe só na tabela profiles, crie ou redefina o usuário em Supabase → Authentication → Users.",
+          },
+          { status: 401 }
+        );
+      }
+
+      return NextResponse.json(
+        { error: error?.message ?? "Credenciais inválidas." },
+        { status: 401 }
+      );
     }
 
-    const { data: profile } = await supabase
-      .from("profiles")
-      .select("role")
-      .eq("id", data.user.id)
-      .single<{ role: string }>();
+    const profile = hasAdminClient()
+      ? await getProfileById(data.user.id)
+      : await supabase
+          .from("profiles")
+          .select("role")
+          .eq("id", data.user.id)
+          .single<{ role: string }>()
+          .then(({ data: row }) =>
+            row ? { id: data.user.id, role: row.role } : null
+          );
 
-    if (profile?.role !== "admin") {
+    if (!profile) {
       await supabase.auth.signOut();
       return NextResponse.json(
-        { error: "Acesso restrito a administradores." },
+        {
+          error:
+            "Conta sem perfil. Rode supabase/reset-admin-password.sql no Supabase para criar o perfil admin.",
+        },
+        { status: 403 }
+      );
+    }
+
+    if (profile.role !== "admin") {
+      await supabase.auth.signOut();
+      return NextResponse.json(
+        {
+          error: `Acesso restrito a administradores. Seu perfil está como "${profile.role}". Rode o SQL de admin no Supabase.`,
+        },
         { status: 403 }
       );
     }
