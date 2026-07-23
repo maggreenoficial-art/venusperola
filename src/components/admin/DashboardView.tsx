@@ -33,13 +33,28 @@ import { AdminPageTitle } from "@/components/admin/AdminMobileUI";
 export function DashboardView() {
   const [data, setData] = useState<DashboardData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   const load = useCallback(async () => {
     setLoading(true);
-    const res = await fetch("/api/admin/stats");
-    const json = await res.json();
-    setData(json);
-    setLoading(false);
+    setError("");
+    try {
+      const res = await fetch("/api/admin/dashboard-data", {
+        credentials: "same-origin",
+      });
+      const json = await res.json();
+      if (!res.ok) {
+        setError(json.error ?? "Não foi possível carregar o dashboard.");
+        setData(null);
+        return;
+      }
+      setData(json);
+    } catch {
+      setError("Erro de conexão. Desative bloqueadores de anúncio e tente novamente.");
+      setData(null);
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   useEffect(() => {
@@ -57,7 +72,17 @@ export function DashboardView() {
   }
 
   if (!data) {
-    return <p className="text-muted">Erro ao carregar dashboard.</p>;
+    return (
+      <div className="flex min-h-[60vh] flex-col items-center justify-center gap-3 px-4 text-center">
+        <p className="text-muted">{error || "Erro ao carregar dashboard."}</p>
+        <button
+          onClick={load}
+          className="rounded-full border border-white/20 px-5 py-2.5 text-xs tracking-widest uppercase hover:border-accent"
+        >
+          Tentar novamente
+        </button>
+      </div>
+    );
   }
 
   const { kpis, revenueChart, funnel, campaigns, topProducts, stock, alerts, customers, financial, recentOrders, capiStats } = data;

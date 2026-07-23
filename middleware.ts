@@ -22,7 +22,8 @@ export async function middleware(request: NextRequest) {
 
   if (
     pathname === "/gerenciaralojabt/login" ||
-    pathname === "/api/admin/auth"
+    pathname === "/api/admin/auth" ||
+    pathname === "/api/admin/setup-password"
   ) {
     return supabaseResponse;
   }

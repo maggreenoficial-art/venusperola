@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import { usePathname } from "next/navigation";
 import { META_PIXEL_REFERRER_POLICY } from "@/lib/meta-pixel-config";
 
 const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
@@ -12,8 +13,17 @@ declare global {
   }
 }
 
+function isTrackingExcludedPath(pathname: string) {
+  return (
+    pathname.startsWith("/gerenciaralojabt") ||
+    pathname.startsWith("/afiliados/dashboard")
+  );
+}
+
 export function MetaPixel() {
-  if (!PIXEL_ID) return null;
+  const pathname = usePathname();
+
+  if (!PIXEL_ID || isTrackingExcludedPath(pathname)) return null;
 
   return (
     <>
