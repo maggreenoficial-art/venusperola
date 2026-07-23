@@ -37,7 +37,7 @@ export function AdminLoginForm() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center px-6">
+    <div className="flex min-h-screen items-center justify-center px-4 py-8" style={{ paddingTop: "max(2rem, env(safe-area-inset-top, 0px))" }}>
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-sm border border-white/10 p-8"

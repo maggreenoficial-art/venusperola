@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { AffiliateTierBadge } from "@/components/affiliates/AffiliateTierBadge";
 import { AffiliateAdminProgressList } from "@/components/admin/AffiliateAdminProgressList";
+import { AdminPageTitle } from "@/components/admin/AdminMobileUI";
 import type {
   Affiliate,
   AffiliatePayout,
@@ -131,19 +132,17 @@ export function AffiliatesView() {
     affiliates.find((a) => a.id === id)?.name ?? id.slice(0, 8);
 
   return (
-    <div className="space-y-8 p-6 lg:p-10">
-      <div className="flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <h1 className="font-serif text-3xl italic">Afiliados</h1>
-          <p className="mt-1 text-sm text-muted">
-            Cookie → checkout → comissão → PIX semanal
-          </p>
-        </div>
-        <div className="flex flex-wrap gap-2">
+    <div className="space-y-6">
+      <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between">
+        <AdminPageTitle
+          title="Afiliados"
+          subtitle="Cookie → checkout → comissão → PIX semanal"
+        />
+        <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:flex-wrap">
           <button
             onClick={() => void load()}
             disabled={loading}
-            className="flex items-center gap-2 rounded border border-white/10 px-3 py-2 text-xs hover:bg-white/5"
+            className="flex w-full items-center justify-center gap-2 rounded border border-white/10 px-3 py-2.5 text-xs hover:bg-white/5 sm:w-auto"
           >
             <RefreshCw size={14} className={loading ? "animate-spin" : ""} />
             Atualizar
@@ -151,14 +150,14 @@ export function AffiliatesView() {
           <button
             onClick={() => void runCron()}
             disabled={actionLoading}
-            className="rounded border border-white/10 px-3 py-2 text-xs hover:bg-white/5"
+            className="w-full rounded border border-white/10 px-3 py-2.5 text-xs hover:bg-white/5 sm:w-auto"
           >
             Cron (tiers + auto-aprovar)
           </button>
           <button
             onClick={() => void runPayouts()}
             disabled={actionLoading}
-            className="flex items-center gap-2 rounded bg-accent px-3 py-2 text-xs text-black"
+            className="flex w-full items-center justify-center gap-2 rounded bg-accent px-3 py-2.5 text-xs text-black sm:w-auto"
           >
             <Wallet size={14} />
             Pagar saldos (PIX)
@@ -195,7 +194,7 @@ export function AffiliatesView() {
         })}
       </div>
 
-      <div className="flex gap-2 border-b border-white/10 pb-2">
+      <div className="flex gap-1 overflow-x-auto border-b border-white/10 pb-px [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {(
           [
             { id: "affiliates", label: "Afiliados" },
@@ -206,7 +205,7 @@ export function AffiliatesView() {
           <button
             key={t.id}
             onClick={() => setTab(t.id)}
-            className={`px-4 py-2 text-sm ${
+            className={`shrink-0 px-4 py-2 text-sm ${
               tab === t.id ? "border-b-2 border-accent text-accent" : "text-muted"
             }`}
           >
@@ -220,7 +219,11 @@ export function AffiliatesView() {
           <Loader2 className="animate-spin text-muted" />
         </div>
       ) : tab === "affiliates" ? (
-        <div className="overflow-x-auto rounded-lg border border-white/10">
+        <div className="space-y-2">
+          <p className="text-[10px] text-muted sm:hidden">
+            Deslize horizontalmente para ver todas as colunas →
+          </p>
+          <div className="overflow-x-auto rounded-lg border border-white/10">
           <table className="w-full min-w-[900px] text-left text-sm">
             <thead className="border-b border-white/10 text-[10px] uppercase tracking-widest text-muted">
               <tr>
@@ -283,8 +286,13 @@ export function AffiliatesView() {
             </tbody>
           </table>
         </div>
+        </div>
       ) : tab === "sales" ? (
-        <div className="overflow-x-auto rounded-lg border border-white/10">
+        <div className="space-y-2">
+          <p className="text-[10px] text-muted sm:hidden">
+            Deslize horizontalmente para ver todas as colunas →
+          </p>
+          <div className="overflow-x-auto rounded-lg border border-white/10">
           <table className="w-full min-w-[800px] text-left text-sm">
             <thead className="border-b border-white/10 text-[10px] uppercase tracking-widest text-muted">
               <tr>
@@ -315,6 +323,7 @@ export function AffiliatesView() {
               ))}
             </tbody>
           </table>
+        </div>
         </div>
       ) : (
         <div className="overflow-x-auto rounded-lg border border-white/10">

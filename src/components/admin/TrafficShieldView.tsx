@@ -30,6 +30,10 @@ import type {
 } from "@/lib/traffic-shield/types";
 import { CampaignManager } from "@/components/admin/CampaignManager";
 import { DomainManager } from "@/components/admin/DomainManager";
+import {
+  AdminPageTitle,
+  AdminScrollTabs,
+} from "@/components/admin/AdminMobileUI";
 
 const features = [
   {
@@ -113,29 +117,27 @@ export function TrafficShieldView() {
   }
 
   return (
-    <div className="space-y-8">
-      <div className="flex flex-wrap items-center justify-between gap-4">
-        <div>
+    <div className="space-y-6 sm:space-y-8">
+      <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between">
+        <div className="min-w-0">
           <div className="flex items-center gap-3">
-            <Shield className="text-accent" size={28} />
-            <h1 className="font-serif text-3xl italic">Traffic Shield</h1>
+            <Shield className="shrink-0 text-accent" size={24} />
+            <AdminPageTitle
+              title="Traffic Shield"
+              subtitle="Filtre bots e acessos indesejados antes das campanhas"
+            />
           </div>
-          <p className="mt-2 max-w-2xl text-sm text-muted">
-            Mais controle sobre o seu tráfego. Identifique e filtre bots,
-            ferramentas automatizadas e acessos indesejados antes que impactem
-            suas campanhas.
-          </p>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:items-center">
           {tab === "overview" && (
             <>
               <button
                 onClick={() => updateConfig({ enabled: !config!.enabled })}
                 disabled={saving}
-                className={`rounded-full px-5 py-2 text-xs font-semibold tracking-widest uppercase transition-colors ${
+                className={`w-full rounded-full px-5 py-2.5 text-xs font-semibold tracking-widest uppercase transition-colors sm:w-auto ${
                   config!.enabled
-                    ? "bg-green-500/20 text-green-400 border border-green-500/30"
-                    : "bg-white/10 text-muted border border-white/20"
+                    ? "border border-green-500/30 bg-green-500/20 text-green-400"
+                    : "border border-white/20 bg-white/10 text-muted"
                 }`}
               >
                 {config!.enabled ? "Ativo" : "Inativo"}
@@ -143,7 +145,7 @@ export function TrafficShieldView() {
               <button
                 onClick={load}
                 disabled={loading}
-                className="flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs tracking-widest uppercase hover:border-accent"
+                className="flex w-full items-center justify-center gap-2 rounded-full border border-white/20 px-4 py-2.5 text-xs tracking-widest uppercase hover:border-accent sm:w-auto"
               >
                 <RefreshCw size={14} className={loading ? "animate-spin" : ""} />
                 Atualizar
@@ -153,7 +155,7 @@ export function TrafficShieldView() {
         </div>
       </div>
 
-      <div className="flex gap-2 border-b border-white/10">
+      <AdminScrollTabs>
         {([
           { id: "overview" as const, label: "Visão Geral" },
           { id: "campaigns" as const, label: "Campanhas" },
@@ -162,7 +164,7 @@ export function TrafficShieldView() {
           <button
             key={t.id}
             onClick={() => setTab(t.id)}
-            className={`px-4 py-3 text-xs tracking-widest uppercase transition-colors ${
+            className={`shrink-0 px-4 py-3 text-xs tracking-widest uppercase transition-colors ${
               tab === t.id
                 ? "border-b-2 border-accent text-accent"
                 : "text-muted hover:text-white"
@@ -171,7 +173,7 @@ export function TrafficShieldView() {
             {t.label}
           </button>
         ))}
-      </div>
+      </AdminScrollTabs>
 
       {tab === "campaigns" ? (
         <CampaignManager />

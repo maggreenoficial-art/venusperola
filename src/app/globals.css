@@ -50,6 +50,30 @@ body {
   }
 }
 
+/* Painel admin — mobile */
+.admin-main {
+  padding: 1rem;
+  padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 640px) {
+  .admin-main {
+    padding: 1.25rem 1.5rem;
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (min-width: 1024px) {
+  .admin-main {
+    padding: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.admin-mobile-header {
+  -webkit-backdrop-filter: blur(12px);
+}
+
 .page-section {
   padding-left: max(1rem, env(safe-area-inset-left, 0px));
   padding-right: max(1rem, env(safe-area-inset-right, 0px));

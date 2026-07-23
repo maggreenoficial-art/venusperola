@@ -28,6 +28,10 @@ import {
 import { MetaColumnPicker } from "@/components/admin/MetaColumnPicker";
 import { MetaManagerTable } from "@/components/admin/MetaManagerTable";
 import { MetaSummaryPanel } from "@/components/admin/MetaSummaryPanel";
+import {
+  AdminPageTitle,
+  AdminScrollTabs,
+} from "@/components/admin/AdminMobileUI";
 
 type Tab = "summary" | "manager" | "accounts" | "utms";
 type ManagerLevel = "campaigns" | "adsets" | "ads";
@@ -400,18 +404,16 @@ export function MetaAdsView() {
   }
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <h2 className="font-serif text-2xl italic">Meta Ads</h2>
-          <p className="mt-1 text-sm text-muted">
-            Campanha → Conjunto → Anúncio, igual ao Gerenciador da Meta
-          </p>
-        </div>
+    <div className="space-y-5 sm:space-y-6">
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between">
+        <AdminPageTitle
+          title="Meta Ads"
+          subtitle="Campanha → Conjunto → Anúncio"
+        />
         <button
           onClick={() => refreshAll(true)}
           disabled={syncing}
-          className="flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-xs hover:border-accent hover:text-accent disabled:opacity-40"
+          className="flex w-full items-center justify-center gap-2 rounded-full border border-white/10 px-4 py-2.5 text-xs hover:border-accent hover:text-accent disabled:opacity-40 sm:w-auto"
         >
           <RefreshCw size={14} className={syncing ? "animate-spin" : ""} />
           {syncing ? "Sincronizando..." : "Atualizar"}
@@ -441,12 +443,12 @@ export function MetaAdsView() {
         </div>
       )}
 
-      <div className="flex gap-1 border-b border-white/10">
+      <AdminScrollTabs>
         {tabs.map((t) => (
           <button
             key={t.id}
             onClick={() => setTab(t.id)}
-            className={`px-4 py-2.5 text-xs font-medium transition-colors ${
+            className={`shrink-0 px-4 py-2.5 text-xs font-medium transition-colors ${
               tab === t.id
                 ? "border-b-2 border-accent text-accent"
                 : "text-muted hover:text-white"
@@ -455,7 +457,7 @@ export function MetaAdsView() {
             {t.label}
           </button>
         ))}
-      </div>
+      </AdminScrollTabs>
 
       {(tab === "manager") && (
         <div className="flex flex-wrap items-center gap-3">
@@ -530,12 +532,13 @@ export function MetaAdsView() {
 
       {tab === "manager" && (
         <div className="space-y-4">
-          <div className="flex flex-wrap items-center gap-2 border border-white/10 p-1">
+          <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+            <div className="flex min-w-max gap-1 border border-white/10 p-1">
             {MANAGER_TABS.map((mt) => (
               <button
                 key={mt.id}
                 onClick={() => goToLevel(mt.id)}
-                className={`rounded px-4 py-2 text-xs font-medium transition-colors ${
+                className={`shrink-0 rounded px-4 py-2 text-xs font-medium transition-colors ${
                   managerLevel === mt.id
                     ? "bg-accent/15 text-accent"
                     : "text-muted hover:text-white"
@@ -544,6 +547,7 @@ export function MetaAdsView() {
                 {mt.label}
               </button>
             ))}
+            </div>
           </div>
 
           <nav className="flex flex-wrap items-center gap-1 text-xs text-muted">

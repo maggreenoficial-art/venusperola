@@ -28,6 +28,7 @@ import {
 } from "lucide-react";
 import { formatPrice } from "@/lib/catalog";
 import type { DashboardData } from "@/lib/dashboard";
+import { AdminPageTitle } from "@/components/admin/AdminMobileUI";
 
 export function DashboardView() {
   const [data, setData] = useState<DashboardData | null>(null);
@@ -62,18 +63,16 @@ export function DashboardView() {
   const { kpis, revenueChart, funnel, campaigns, topProducts, stock, alerts, customers, financial, recentOrders, capiStats } = data;
 
   return (
-    <div className="space-y-8">
-      <div className="flex flex-wrap items-center justify-between gap-4">
-        <div>
-          <h1 className="font-serif text-3xl italic">Dashboard</h1>
-          <p className="mt-1 text-sm text-muted">
-            Visão geral da loja · atualiza a cada 60s
-          </p>
-        </div>
+    <div className="space-y-6 sm:space-y-8">
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+        <AdminPageTitle
+          title="Dashboard"
+          subtitle="Visão geral da loja · atualiza a cada 60s"
+        />
         <button
           onClick={load}
           disabled={loading}
-          className="flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs tracking-widest uppercase hover:border-accent"
+          className="flex w-full items-center justify-center gap-2 rounded-full border border-white/20 px-4 py-2.5 text-xs tracking-widest uppercase hover:border-accent sm:w-auto"
         >
           <RefreshCw size={14} className={loading ? "animate-spin" : ""} />
           Atualizar
@@ -118,16 +117,18 @@ export function DashboardView() {
       </section>
 
       {/* CAPI status */}
-      <div className="flex flex-wrap items-center gap-4 rounded border border-white/10 bg-white/[0.02] px-4 py-3 text-xs">
-        <Zap size={14} className="text-accent" />
-        <span className="text-muted">Meta CAPI (server-side):</span>
-        <span>{capiStats.serverEvents} eventos server</span>
-        <span className="text-muted">·</span>
+      <div className="flex flex-col gap-2 rounded border border-white/10 bg-white/2 px-4 py-3 text-xs sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+        <div className="flex items-center gap-2">
+          <Zap size={14} className="shrink-0 text-accent" />
+          <span className="text-muted">Meta CAPI:</span>
+        </div>
+        <span>{capiStats.serverEvents} server</span>
+        <span className="hidden text-muted sm:inline">·</span>
         <span>{capiStats.browserEvents} browser</span>
-        <span className="text-muted">·</span>
-        <span className="text-green-400">{capiStats.capiPurchases} purchases CAPI</span>
-        <span className="ml-auto text-[10px] text-muted">
-          Recupera 30-50% das conversões perdidas pelo pixel
+        <span className="hidden text-muted sm:inline">·</span>
+        <span className="text-green-400">{capiStats.capiPurchases} purchases</span>
+        <span className="text-[10px] text-muted sm:ml-auto">
+          Recupera conversões perdidas pelo pixel
         </span>
       </div>
 

@@ -143,18 +143,17 @@ export function CampaignManager() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap items-center justify-between gap-4">
-        <div>
-          <h2 className="font-serif text-2xl italic">Campanhas</h2>
-          <p className="mt-1 text-sm text-muted">
-            Crie e gerencie campanhas com regras de tráfego, URLs seguras, ofertas
-            e segmentação
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+        <div className="min-w-0">
+          <h2 className="font-serif text-xl italic sm:text-2xl">Campanhas</h2>
+          <p className="mt-1 text-xs text-muted sm:text-sm">
+            URLs seguras, ofertas e segmentação de tráfego
           </p>
         </div>
         <button
           onClick={() => setShowForm(true)}
           disabled={!canCreateCampaigns}
-          className="flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-xs font-semibold text-black hover:bg-accent disabled:opacity-40"
+          className="flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-2.5 text-xs font-semibold text-black hover:bg-accent disabled:opacity-40 sm:w-auto"
         >
           <Plus size={14} />
           Nova campanha
@@ -190,6 +189,9 @@ export function CampaignManager() {
         </button>
       </div>
 
+      <p className="text-[10px] text-muted sm:hidden">
+        Deslize horizontalmente para ver todas as colunas →
+      </p>
       <div className="overflow-x-auto border border-white/10">
         <table className="w-full min-w-[900px] text-left text-xs">
           <thead>

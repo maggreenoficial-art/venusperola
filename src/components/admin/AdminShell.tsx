@@ -10,6 +10,10 @@ import {
   ShoppingBag,
   Users,
 } from "lucide-react";
+import {
+  AdminMobileNav,
+  adminPageTitle,
+} from "@/components/admin/AdminMobileNav";
 
 const nav = [
   { href: "/gerenciaralojabt", label: "Dashboard", icon: LayoutDashboard },
@@ -46,7 +50,10 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
         <nav className="mt-10 space-y-1">
           {nav.map((item) => {
             const Icon = item.icon;
-            const active = pathname === item.href || (item.href !== "/gerenciaralojabt" && pathname.startsWith(item.href));
+            const active =
+              pathname === item.href ||
+              (item.href !== "/gerenciaralojabt" &&
+                pathname.startsWith(item.href));
             return (
               <Link
                 key={item.href}
@@ -82,14 +89,39 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
         </div>
       </aside>
 
-      <div className="flex-1 overflow-auto">
-        <header className="flex items-center justify-between border-b border-white/10 px-6 py-4 lg:hidden">
-          <span className="font-serif italic">Dashboard</span>
-          <button onClick={handleLogout} className="text-xs text-muted">
-            Sair
-          </button>
+      <div className="flex min-w-0 flex-1 flex-col">
+        <header
+          className="admin-mobile-header sticky top-0 z-40 flex items-center justify-between border-b border-white/10 bg-black/95 px-4 py-3 backdrop-blur-md lg:hidden"
+          style={{ paddingTop: "max(0.75rem, env(safe-area-inset-top, 0px))" }}
+        >
+          <div className="min-w-0">
+            <p className="truncate font-serif text-lg italic leading-tight">
+              {adminPageTitle(pathname)}
+            </p>
+            <p className="text-[10px] tracking-widest text-muted uppercase">
+              Vênus Pérola
+            </p>
+          </div>
+          <div className="flex shrink-0 items-center gap-1">
+            <Link
+              href="/loja"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-muted hover:text-white"
+              aria-label="Ver loja"
+            >
+              <ShoppingBag size={18} />
+            </Link>
+            <button
+              onClick={handleLogout}
+              className="flex h-10 w-10 items-center justify-center rounded-full text-muted hover:text-red-400"
+              aria-label="Sair"
+            >
+              <LogOut size={18} />
+            </button>
+          </div>
         </header>
-        <main className="p-6">{children}</main>
+
+        <main className="admin-main flex-1 overflow-x-hidden">{children}</main>
+        <AdminMobileNav />
       </div>
     </div>
   );
