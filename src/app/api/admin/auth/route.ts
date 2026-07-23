@@ -1,9 +1,23 @@
-import { NextResponse } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 import { getProfileById } from "@/lib/db/profiles";
 import { hasAdminClient } from "@/lib/supabase/admin";
-import { createClient } from "@/lib/supabase/server";
+import { createRouteHandlerClient } from "@/lib/supabase/route-handler";
 
-export async function POST(request: Request) {
+function jsonWithCookies(
+  body: Record<string, unknown>,
+  status: number,
+  cookieSource: NextResponse
+) {
+  const response = NextResponse.json(body, { status });
+  cookieSource.cookies.getAll().forEach((cookie) => {
+    response.cookies.set(cookie);
+  });
+  return response;
+}
+
+export async function POST(request: NextRequest) {
+  const cookieCarrier = NextResponse.next({ request });
+
   try {
     const { email, password } = (await request.json()) as {
       email?: string;
@@ -17,7 +31,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const supabase = await createClient();
+    const supabase = createRouteHandlerClient(request, cookieCarrier);
     const normalizedEmail = email.trim().toLowerCase();
     const { data, error } = await supabase.auth.signInWithPassword({
       email: normalizedEmail,
@@ -83,14 +97,15 @@ export async function POST(request: Request) {
       );
     }
 
-    return NextResponse.json({ success: true });
+    return jsonWithCookies({ success: true }, 200, cookieCarrier);
   } catch {
     return NextResponse.json({ error: "Erro ao autenticar." }, { status: 500 });
   }
 }
 
-export async function DELETE() {
-  const supabase = await createClient();
+export async function DELETE(request: NextRequest) {
+  const cookieCarrier = NextResponse.next({ request });
+  const supabase = createRouteHandlerClient(request, cookieCarrier);
   await supabase.auth.signOut();
-  return NextResponse.json({ success: true });
+  return jsonWithCookies({ success: true }, 200, cookieCarrier);
 }

@@ -1,11 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { Lock, Loader2, Mail } from "lucide-react";
 
 export function AdminLoginForm() {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,23 +16,28 @@ export function AdminLoginForm() {
     setLoading(true);
     setError("");
 
-    const res = await fetch("/api/admin/auth", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
+    try {
+      const res = await fetch("/api/admin/auth", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+        credentials: "same-origin",
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (!res.ok) {
-      setError(data.error ?? "Credenciais inválidas.");
+      if (!res.ok) {
+        setError(data.error ?? "Credenciais inválidas.");
+        return;
+      }
+
+      const from = searchParams.get("from") ?? "/gerenciaralojabt";
+      window.location.assign(from);
+    } catch {
+      setError("Erro de conexão. Tente novamente.");
+    } finally {
       setLoading(false);
-      return;
     }
-
-    const from = searchParams.get("from") ?? "/gerenciaralojabt";
-    router.push(from);
-    router.refresh();
   };
 
   return (
