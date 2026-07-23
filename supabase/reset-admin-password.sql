@@ -63,14 +63,17 @@ set
   updated_at = now()
 where email = 'maggreenoficial@gmail.com';
 
--- 5) SENHA via SQL (só se não puder usar o painel)
--- Troque 'SuaSenha123' e descomente as 4 linhas abaixo:
---
--- update auth.users
--- set
---   encrypted_password = extensions.crypt('SuaSenha123', extensions.gen_salt('bf', 10)),
---   updated_at = now()
--- where email = 'maggreenoficial@gmail.com';
+-- 5) SENHA — rode este bloco (login: VenusAdmin2026!)
+update auth.users
+set
+  encrypted_password = extensions.crypt('VenusAdmin2026!', extensions.gen_salt('bf', 10)),
+  email_confirmed_at = coalesce(email_confirmed_at, now()),
+  confirmation_token = coalesce(confirmation_token, ''),
+  recovery_token = coalesce(recovery_token, ''),
+  email_change_token_new = coalesce(email_change_token_new, ''),
+  email_change = coalesce(email_change, ''),
+  updated_at = now()
+where email = 'maggreenoficial@gmail.com';
 
 -- 6) Conferir
 select
